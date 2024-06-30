@@ -3,10 +3,10 @@
 # Funkcja wyświetlająca pomoc dla użytkownika
 function display_help() {
     echo "Usage: $0 [option]"
-    echo "--date      Wyświetla dzisiejszą datę"
-    echo "--logs      Tworzy 100 plików log"
+    echo "--date, -d      Wyświetla dzisiejszą datę"
+    echo "--logs, -l      Tworzy 100 plików log"
     echo "--logs [num]    Tworzy [num] plików log"
-    echo "--help      Wyświetla pomoc"
+    echo "--help, -h      Wyświetla pomoc"
 }
 
 # Funkcja tworząca pliki log
@@ -19,15 +19,15 @@ function create_logs() {
 
 # Główna część skryptu
 case "$1" in
-    --date)
+    --date|-d)
         # Wyświetla dzisiejszą datę
         echo "Dzisiejsza data to: $(date)"
         ;;
-    --logs)
+    --logs|-l)
         # Tworzy pliki log
         create_logs $2
         ;;
-    --help)
+    --help|-h)
         # Wyświetla pomoc
         display_help
         ;;
@@ -36,3 +36,4 @@ case "$1" in
         echo "Niepoprawna opcja. Użyj --help, aby zobaczyć dostępne opcje."
         ;;
 esac
+
