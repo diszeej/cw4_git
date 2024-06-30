@@ -1,0 +1,5 @@
+Usage: ./skrypt.sh [option]
+--date      Wyświetla dzisiejszą datę
+--logs      Tworzy 100 plików log
+--logs [num]    Tworzy [num] plików log
+--help      Wyświetla pomoc
